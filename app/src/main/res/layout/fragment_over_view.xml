@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.OverViewFragment">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topGuidLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/_17ssp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/startGuidLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/_17sdp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endGuidLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/_17sdp" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clAddHomeTown"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/endGuidLine"
+        app:layout_constraintStart_toStartOf="@id/startGuidLine">
+
+        <TextView
+            android:id="@+id/tvAddHomeTown"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_17sdp"
+            android:background="@drawable/bg_about_shape"
+            android:drawablePadding="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:gravity="center_vertical"
+            android:text="@string/add_home_town"
+            android:textColor="@color/black_6"
+            android:textSize="@dimen/_10ssp"
+            app:drawableStartCompat="@drawable/ic_about_plus"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/includeAddHomeTown"
+            layout="@layout/item_add_workplace"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAddHomeTown"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

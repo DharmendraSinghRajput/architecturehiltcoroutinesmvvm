@@ -1,0 +1,46 @@
+package com.example.architecturehiltcoroutinesmvvm.ui.home
+
+data class UserByIdAndAuthcodeResponse(
+    val status: String,
+    val code: String,
+    val message: String,
+    val `data`: Data
+) {
+    data class Data(
+        val vImage: String,
+        val vUserBanner: String,
+        val vBusinessImage: String,
+        val vBusinessBanner: String,
+        val iUserId: Int,
+        val iRoleId: Int,
+        val vRole: String,
+        val vFirstName: String,
+        val vLastName: String,
+        val vEmail: String,
+        val vSecondaryEmail: String,
+        val vPassword: String,
+        val eGender: String,
+        val vPrimaryNumber: Any,
+        val vSecondaryNumber: String,
+        val vPrimaryOTP: Any,
+        val vSecondaryOTP: Any,
+        val vBusinessName: Any,
+        val vBusinessSlug: Any,
+        val vPersonalSlug: Any,
+        val vIPAddress: String,
+        val vUniqueId: String,
+        val eStatus: String,
+        val eEmailVerified: String,
+        val dtAddedDate: String,
+        val dtUpdatedDate: String,
+        val vAuthCode: Any,
+        val dBirthDate: String,
+        val eUnder13: String,
+        val eRelationship: String,
+        val vPartner: String = "",
+        val vCurrentCity: String,
+        val vHomeTown: String,
+        val team_member_data: List<Any>,
+        val eUserAccountType:String,
+    )
+}

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contacts_type"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_14sdp"
+    android:background="@drawable/bg_shape_row"
+    android:paddingVertical="@dimen/_10sdp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/startGuidLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/_10sdp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endGuidLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/_10sdp" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivEducation"
+        android:layout_width="@dimen/_18sdp"
+        android:layout_height="@dimen/_18sdp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_about_house"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/startGuidLine"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:shapeAppearance="@style/Theme.RoundSquareImage" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:layout_constraintEnd_toStartOf="@+id/imgEdit"
+        app:layout_constraintStart_toEndOf="@id/ivEducation"
+        app:layout_constraintTop_toTopOf="@+id/ivEducation">
+
+        <TextView
+            android:id="@+id/tvEducationTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:includeFontPadding="false"
+            android:textColor="@color/tundora"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="title" />
+
+        <TextView
+            android:id="@+id/tvCompanyName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginEnd="@dimen/_14sdp"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvEducationTitle"
+            tools:text="Pace University" />
+
+        <TextView
+            android:id="@+id/tvUniversity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCompanyName"
+            tools:text="Pace University" />
+
+        <TextView
+            android:id="@+id/tvToDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvUniversity"
+            app:layout_constraintStart_toEndOf="@+id/tvUniversity"
+            app:layout_constraintTop_toTopOf="@+id/tvUniversity"
+            tools:text="Present" />
+
+        <TextView
+            android:id="@+id/tvCity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvToDate"
+            tools:text="@string/city_or_town" />
+
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:fontFamily="@font/raleway_regular"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCity"
+            tools:text="@string/description" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imgEdit"
+        android:layout_width="@dimen/_18sdp"
+        android:layout_height="@dimen/_18sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:src="@drawable/ic_pencil_edit_profile"
+        app:layout_constraintEnd_toStartOf="@id/imgDelete"
+        app:layout_constraintTop_toTopOf="@+id/ivEducation" />
+
+    <ImageView
+        android:id="@+id/imgDelete"
+        android:layout_width="@dimen/_18sdp"
+        android:layout_height="@dimen/_18sdp"
+        android:src="@drawable/ic_delete_round"
+        app:layout_constraintEnd_toEndOf="@id/endGuidLine"
+        app:layout_constraintTop_toTopOf="@+id/ivEducation" />
+</androidx.constraintlayout.widget.ConstraintLayout>
